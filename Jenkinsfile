@@ -3,16 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
-                sh 'echo "fish"'
+                sh 'echo "Build complete."'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Tests complete"'
+                sh 'echo "Tests complete."'
             }
         }
-        stage('Deploy Woodstove') {
+        stage('Deploy') {
             steps {
                 sh 'echo "Woodstove deployed."'
             }
