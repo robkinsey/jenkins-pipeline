@@ -4,6 +4,9 @@ pipeline {
             image 'maven:3-alpine' 
         } 
     }
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
         stage('build') {
             steps {
@@ -22,7 +25,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Woodstove deployed."'
+                sh './scripts/deliver.sh'
             }
         }
     }
