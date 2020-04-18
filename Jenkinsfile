@@ -7,5 +7,15 @@ pipeline {
                 sh 'echo "fish"'
             }
         }
+        stage('Test') {
+            steps {
+                sh 'echo "Tests complete"'
+            }
+        }
+        stage('Deploy Woodstove') {
+            steps {
+                sh 'echo "Woodstove deployed."'
+            }
+        }
     }
 }
