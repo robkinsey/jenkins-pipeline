@@ -1,5 +1,9 @@
 package com.robkinsey.app;
 
+import java.util.logging.Logger;
+
+private final static Logger LOGGER = Logger.getLogger(MyLogger.class.getName());
+
 /**
  * This application will use a woodstove to heat a room.
  *
