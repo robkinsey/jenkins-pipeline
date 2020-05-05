@@ -1,8 +1,7 @@
 package com.robkinsey.app;
 
 import java.util.logging.Logger;
-
-private final static Logger LOGGER = Logger.getLogger(MyLogger.class.getName());
+import java.util.logging.Level;
 
 /**
  * This application will use a woodstove to heat a room.
@@ -10,8 +9,11 @@ private final static Logger LOGGER = Logger.getLogger(MyLogger.class.getName());
  */
 public class App 
 {
+    private final static Logger LOGGER = Logger.getLogger(App.class.getName());
+
     public static void main( String[] args )
     {
-        System.out.println( "The room is now toasty." );
+      LOGGER.setLevel(Level.INFO);  
+      LOGGER.info( "The room is now toasty." );
     }
 }
